@@ -1,0 +1,969 @@
+@font-face {
+    font-family: "Gothic";
+    src: url("../Fonts/Gotic.ttf") format("truetype");
+   
+    }
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gothic', sans-serif;
+    font-weight: 400;
+    color:white;
+}
+img{
+    width: 100%;
+}
+.list_reset{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.btn_reset{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.main{
+    background-image: url(../img/Page1noCar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.header_container{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 0 0;
+
+   
+}
+.nav{
+    align-items: center;
+    margin: 22px 0 0 0 ;
+}
+.links{
+   background-color: white;
+    display: inline-block;
+    color: black;
+}
+.list_item{
+    display: inline;
+    margin: 0 10px;
+} 
+.menu_btn{
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 40%;
+    float: right;
+    margin-right: -54px;
+    margin-top: -50px;
+}
+.burger_line{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+    top: 95.5px;
+    margin-left: 540px;
+    cursor: pointer;
+}
+.burger_line::before,
+.burger_line::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #222; 
+    transition: 0.5s;
+  
+
+}
+.burger_line::before{
+    transform: translateY(5px);
+}
+.burger_line::after{
+    transform: translateY(-5px);
+    
+}
+.menu_btn_active.burger_line::before{
+    transform: rotate(35deg);
+    transform-origin: left;
+    width: 10px;
+}
+.menu_btn_active.burger_line::after{
+    transform: rotate(-35deg);
+    transform-origin: left ;
+    width: 10px ;
+}
+.burger_nav{
+    transition: 0.5s;
+    background-color: white;
+    height: 50px;
+    transform-origin: right center;
+    transform: scaleX(0) translateX(0%) ;
+    opacity: 0;
+    padding-left: 20px;
+    padding-right: 40px;
+    margin-right: -25px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+   
+ }
+ .burger_nav_active{
+     transform: scaleX(1) translateX(0%);
+     opacity: 1;
+ }
+.burger_nav_link{
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    line-height: 50px
+    
+}
+
+/* Первая секция */
+
+.hero{
+    padding: 160px 0 110px 0;
+    margin-bottom: -3px;
+}
+
+/* Заголовки и текст */
+.main_headings{
+    float: right;
+
+}
+.first_main_heading{
+    font-size: 6em;
+    margin-top: 0;
+    margin-bottom: 40px;
+   
+}
+.sub_main_heading{
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    background: linear-gradient(158deg , #ff4e3f 20%, #a60c7b 43%, #8AA9D6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    display: table;
+    margin: 20px auto;
+}
+.sub_main_heading::after{
+    content: '';
+    height: 3px;
+    width: 170px;
+    background-color: red;
+    display: inline-block;
+    margin-left: 78px;
+}
+.third_main_heading{
+    font-size:1.5em;
+    margin-bottom: 20px;
+}
+.main_text{
+    font-size: 1em;
+}
+/* Картинка машины */
+
+.car_box{
+    margin-left: -67px;
+    width: 480px;
+    margin-top: 10px;
+    margin-bottom: 230px;
+
+}
+.car1{
+    width: 120%;
+}
+.car_light{
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: rgba(200, 255, 0, 0.473);
+    margin: 110px 0 0 110px;
+    transform: rotate(35deg);
+    transform-origin: left;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 70px;
+
+}
+
+/* Быстро Качественно Недорого */
+
+.bottom_line_main{
+    background-image: url(../img/purpleLine.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin-top: -100px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+} 
+.botton_line_text{
+    font-size: 1.7em;
+    line-height: 80px;
+    word-spacing: 7.1em;
+    margin-left: 4em;
+}
+
+/* Cекция услуг */
+
+.services{
+    background-image: url(../img/mersedes2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1080px;
+    margin-bottom: -15px;
+}
+.services_heading{
+    float:left;
+    margin-top: 85px;
+  
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.services_main_heading{
+    font-size: 72px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+.services_main_heading::after{
+    content:'УСЛУГИ';
+    opacity: 0.04;
+    display: block;
+    margin-top: -41px;
+    margin-left: 73px;
+}
+.services_sub_heading{
+    font-size: 24px;
+}
+.services_sub_heading::before{
+    content: '';
+    background-color: #6c29ed;
+    width: 105px;
+    height: 4px;
+    display: block;
+    margin: -61px 0 20px 0;
+}
+
+/* Для списка ЕСЛИ НЕ СРАБОТАЕТ УДАЛИТЬ */
+.services_list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 190px;
+   
+}
+.list_item{
+    background-image: url(../img/services_black.png);
+    width: 300px;
+    padding: 15px;
+}
+.list_img_item{
+    background-image: url(../img/services_purple.png);
+    width: 300px;
+    padding: 15px;
+    margin: 0 10px;
+}
+/*  КОНЕЦ */
+
+.services_board{
+    padding: 147px 0 0 0px;
+}
+.services_board_item{
+    display: inline-block;
+    margin-right: 18px;
+    font-size: 16px;
+}
+.services_content_wraper{
+    margin: 0 auto;
+    padding-left: 500px ;
+}
+.services_content_first{
+    display: inline-flex;
+    margin-top: 130px;
+}
+
+.services_content_second{
+    display:inline-flex;
+}
+.services_block_heading{
+    margin: 5px auto;
+}
+.services_block_heading::after{
+    content: '';
+    background-color: #6c29ed;
+    height: 2px;
+    width: 45px;
+    display: block;
+    margin-top: 8px;
+}
+.block-1 ,.block-2,.block-3,.block-4{ 
+    background-image: url(../img/services_black.png);
+    width: 300px;
+    margin: 10px 10px;
+    padding: 15px;
+}
+.block-4{
+    background-image: url(../img/services_purple.png);
+}
+.sevices_logo {
+    margin: 0 0 0 66px;
+    width: 50%;
+}
+
+/* Секция преимуществ */
+ .advantages{
+    background-image: url(../img/Advantages_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+ }
+ .advanteges_article{
+    padding-top: 99px;
+    
+ }
+ .advantages_headings{
+    float: left;
+ }
+ .advantages_heading{
+    font-size: 72px;
+    line-height: 80px;
+    margin-bottom: 100px;
+   
+ }
+ .advantages_heading::before{
+    content: 'НАШИ';
+    opacity: 0.07;
+    display: block;
+    margin-left: 79px;
+    margin-top: -70px;
+    padding-top: 100px;
+    position: absolute;
+
+ }
+ .advantages_heading::after{
+    content: 'ПРЕИМУЩЕСТВА';
+    opacity: 0.07;
+    display: block;
+    margin-left: 73px;
+    position: absolute;
+    margin-top: -45px;
+    
+
+ }
+ .advantages_sub_heading{
+     font-size: 24px;
+   
+ }
+ .advanteges_content{
+     padding-bottom: 111px;
+     margin-top: -300px;
+     margin-left: 700px;
+}
+ .advanteges_block{
+     width: 400px;
+     height: 150px;
+   
+     display:flex;
+     text-align: center;
+     margin-top: 60px;
+ }
+ .advanteges_block-1{
+     background-image: url(../img/Icon_bg_only_exp_mech.png);
+     padding-left: 100px;
+     background-position: center;
+     background-size: cover;
+ }
+ .advanteges_block-2{
+    background-image: url(../img/Icon_bg_q_pares.png);
+    padding-left: 100px;
+    background-position: center;
+    background-size: cover;
+}
+.advanteges_block-3{
+    background-image: url(../img/Icon_bg_spectrum.png);
+    padding-left: 100px;
+    background-position: center;
+    background-size: cover;
+}
+.advanteges_block-4{
+    background-image: url(../img/Icon_bg_right_in_time.png);
+    padding-left: 100px;
+    background-position: center;
+    background-size: cover;
+}
+ .advantages_block_content{
+    font-size: 18px;
+    margin: 61px auto;
+ }
+ .wheels{
+    width: 790px;
+    margin: -400px -12px 144px -173px;
+ }
+
+
+ /* О компании */
+
+
+ .about_company{
+     background-image: url(../img/About_company_bg.png);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 1080px;
+ }
+ .about_header_main{
+     margin: 0 auto;
+     padding: 140px 0 165px 0;
+     text-align: center;
+ }
+ .Red_stick{
+     position: absolute;
+     width: 300px;
+    margin: 145px 0 0 854px;
+
+ }  
+ .about_header_main_text{
+    font-size: 90px;
+    color: #271a42;
+    display: block;
+ }
+ .about_header_main_text::after{
+    content: 'О компании';
+    display: block;
+    font-size: 72px;
+    color: white;
+    margin-top: -119px;
+ }
+.about_company_main{
+    background-image: url(../img/About_company_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: fit-content;
+    margin: 65px auto;
+    padding-top: 85px;
+    padding-left: 120px;
+    padding-bottom: 106px;
+
+}
+.about_sub_header{
+    font-size: 24px;
+   
+}
+.about_main_text_a,.about_main_text_b,.about_main_text_c{
+    font-size: 18px;
+    margin-right: 210px;
+   
+}
+.about_main_text_a{
+    margin:84px 0 0 0;
+}
+.about_main_text_b,.about_main_text_c{
+    margin-top: 30px;
+}
+
+/* Контакты */
+ .contact{
+    background-image: url(../img/contact_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 40px;
+    
+ }
+ .contact_main{
+  
+    width: max-content;
+    margin: 0 auto;
+    padding: 50px;
+  
+  
+
+ }
+ .call_to_ass{
+    text-align: left;
+     font-size: 72px;
+ }
+ .info{
+     background-color: #7458c1;
+     margin: 39px 5px;
+     font-size: 24px;
+     line-height: 71px;
+     box-shadow: 8px -12px 14px 8px rgb(43 16 109 / 88%);
+     padding: 10px;
+     border-radius: 20px;
+ }
+ .foot_text{
+     margin-top: 95px;
+     padding-bottom: 10px;
+     font-size: 24px;
+ }
+ a{
+     text-decoration: none;
+     color: white;
+ }
+.btn_call_to_ass{
+    display: none;
+}
+ /* Медиа запросы */
+@media (max-width:1200px) {
+    .hero{
+        padding: 60px 0 10px 0;
+    }   
+
+    .main_headings{
+        font-size: 90%;
+        margin-right: 100px;
+    }
+    .car_box{
+        margin-bottom: 100px;
+    }
+    .services{
+        height: 1000px;
+    }
+    .services_list{
+        margin-top: 167px;
+        margin-left: -13px;
+        padding: 7px 300px 0 0;
+    }
+    .about_company_main{
+            margin: -47px auto;
+    }
+    
+}
+ @media (max-width:1200px) {
+     .container{
+         max-width: 996px;
+     }
+     .hero{
+         padding: 0 0 100px 0;
+     }
+     .main_headings{
+        font-size: 90%;
+        margin-right: 138px;
+        margin-bottom: 40px;
+     }
+     .botton_line_text{
+        font-size: 1.5em;
+        margin-left: 3em;
+            
+     }
+     .bottom_line_main{
+        width: 1020px;
+        margin-top: -129px;
+        margin-left: -35px;
+    }
+    .car_box{
+        margin-left: 230px;
+        width: 480px;
+    }
+    .car1{
+        width: 100%;
+    }
+ 
+     .services_content_wraper {
+        padding-left: 300px;
+    }
+    .services_board_ul{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr)
+    }
+    .advanteges_headings{
+        margin: 0 264px;
+     }
+     .wheels{
+        width: 790px;
+        margin: -89px -34px -8px -90px;
+    }
+    .advanteges_content {
+       margin: 0 0 0 300px;
+    }
+    .Red_stick{
+        margin-left: 760px;
+        display: none;
+        
+    }
+
+    .call_to_ass_text{
+        color: #fff;
+    }
+}
+
+ @media (max-width:996px) {
+     .container{
+         max-width: 768px;
+     }
+     .botton_line_text{
+        display: none;
+    }
+    .nav{
+        margin: 38px -81px 0 0;
+    }
+   
+    .burger_nav {
+        transition: 0.2s;
+        position: absolute;
+        background-color: white;
+        height: fit-content;
+        transform-origin: right top;
+        transform: scaleX(0) translateX(0%);
+        opacity: 0;
+        transform: scale(0);
+        padding-left: 13px;
+        margin: -30px 0 0 -105px;
+        padding-right: 119px;
+        padding-right: 36px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .burger_nav_active {
+        transform: scaleX(1) translateY(0%);
+        opacity: 1;
+    }
+    .burger_nav_link {
+        margin-right: -26px;
+        color: black;
+        text-decoration: none;
+        display: block;
+        line-height: 50px;
+        font-size: 12px;
+    }
+    .menu_btn {
+        margin-right: -8px;
+        margin-top: -30px;
+    }
+    .botton_line_text{
+        display: none;
+    }
+    .burger_line {
+        top: 80.5px;
+        margin-left: 17px;
+    }
+
+    
+    .main_headings{
+        margin-right: 79px;
+    }
+    .car_box{
+        margin-left: 87px;
+
+    }
+    .btn_call_to_ass {
+        width: 319px;
+        height: 48px;
+        display: block;
+        margin: 0 auto;
+        border-style: hidden;
+        border-radius: 24px;
+        background: linear-gradient( 
+    120deg
+    , #52079B 20%, #612AD1 43%, #612af8);
+        box-shadow: 0px -2px 7px 10px rgb(43 16 109 / 88%);
+    }
+    .services_content_wraper{
+        padding-left: 50px;
+    }
+    .advanteges_headings{
+        margin: 0px 75px;
+    }
+    .advanteges_content{
+        margin: -27px 180px;
+    }
+    .about_company_main{
+        width: 650px;
+        margin: -47px auto;
+        padding-top: 32px;
+        padding-left: 56px;
+        padding-bottom: 38px;
+    }
+    .about_main_text_a {
+        margin: 41px 0 0 0;
+    }
+    .wheels{
+        margin: -95px -30px -13px -165px;
+    }
+    .contact_main{
+        width: 650px;
+    }
+ }
+ @media (max-width:767px){
+    body{
+        background-image: url(../img/mobile_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .main,.services,.advantages,.contact,.about_company{
+        background: none;
+    }
+    .header_container {
+        display: flex;
+        justify-content: space-around;
+        padding: 47px 0 0 0;
+    }
+    .main-logo {
+        width: 50%;
+        margin: 11px 0 0 0px;
+    }
+    .nav {
+        margin: 47px 10px 0 0;
+    }
+    .burger_nav {
+        transition: 0.2s;
+        position: absolute;
+        background-color: white;
+        height: fit-content;
+        transform-origin: right top;
+        transform: scaleX(0) translateX(0%);
+        opacity: 0;
+        transform: scale(0);
+        padding-left: 13px;
+        margin: -30px 0 0 -105px;
+        padding-right: 119px;
+        padding-right: 36px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .burger_nav_active {
+        transform: scaleX(1) translateY(0%);
+        opacity: 1;
+    }
+    .burger_line {
+        top: 89px;
+        margin-left: 16px;
+    }
+    .hero {
+        padding: 25px 0 0px 0;
+    }
+    .main_headings {
+        margin-right: -9px;
+        font-size: 80%;
+        margin-bottom: -5px;
+    }
+    .first_main_heading {
+        font-size: 51px;
+        margin: 56px 0 31px 0;
+    }
+    .sub_main_heading {
+        font-size: 2.5em;
+        margin-left: 24px;
+        margin-bottom: 12px;
+    }
+    .sub_main_heading::after {
+        content: '';
+        height: 3px;
+        width: 170px;
+        background-color: red;
+        display: inline-block;
+        margin-left: 41px;
+    }
+    .third_main_heading {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+    .main_text {
+        font-size: 1em;
+        margin: 36px auto;
+    }
+    .car_box {
+        margin-left: -8px;
+        
+        width: 20%;
+    }
+    .car1 {
+        width: 500%;
+    }
+    .btn_call_to_ass {
+        width: 219px;
+        height: 38px;
+        display: block;
+        margin: 0 auto;
+        border-style: hidden;
+        border-radius: 24px;
+        background: linear-gradient( 120deg, #52079B 20%, #612AD1 43%, #612af8);
+        box-shadow: 0px -2px 7px 10px rgb(43 16 109 / 88%);
+    }
+   
+    .services{
+        height: 800px;
+    }
+    .services_heading {
+        float: none;
+        margin-top: 85px;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    .services_main_heading{
+        font-size: 52px;
+    }
+    .services_board{
+        display: none;
+    }
+    .services_board_ul{
+        display: none;
+    }
+    .services_sub_heading::before{
+        margin: -42px 0 20px 0;
+    }
+    .services_list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 57px;
+        padding: 0;
+    }
+    .list_item, .list_img_item {
+        width: 247px;
+        padding: 15px;
+        font-size: 10px;
+        margin: 9px -14px;
+    }
+    .sevices_logo {
+        margin: -1px 0 0 65px;
+        width: 37%;
+    }
+    .advanteges_headings {
+        margin: 13px 31px;
+        margin-bottom: 80px;
+    }
+    .advantages_heading {
+        font-size: 24px;
+        line-height: 42px;
+        margin-bottom: 23px;
+    }
+    .advantages_heading::before {
+        content: 'НАШИ';
+        opacity: 0.07;
+        display: block;
+        margin-left: 45px;
+        margin-top: -91px;
+        padding-top: 103px;
+        position: absolute;
+    }
+    .advantages_heading::after {
+        content: 'ПРЕИМУЩЕСТВА';
+        opacity: 0.07;
+        display: block;
+        margin-left: 36px;
+        position: absolute;
+        margin-top: -27px;
+    }
+    .advantages_sub_heading {
+        font-size: 12px;
+    }
+    .advanteges_block {
+        width: 400px;
+        height: 150px;
+        display: flex;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .advantages_block_content {
+        font-size: 10px;
+        margin: 30px auto;
+    }
+    .advanteges_block-1,.advanteges_block-2,.advanteges_block-3,.advanteges_block-1,.advanteges_block-4{
+        padding-left: 70px;
+        width: 232px;
+        height: 83px;
+    }
+    .advanteges_content {
+        margin: -35px 28px;
+    }
+    .wheels {
+        margin: -76px -36px -1px -210px;
+        width: 480px;
+    }
+    .about_header_main {
+        padding: 50px 0 95px 0;
+    }
+    .about_header_main_text {
+        font-size: 40px;
+        color: #271a42;
+        display: block;
+    }
+    .about_company{
+        height: 500px;
+    }
+    .about_company_main {
+        width: fit-content;
+        padding: 15px 7px 14px 11px;
+    }
+    .advanteges_article {
+        padding-top: 0;
+    }
+    .about_header_main_text::after {
+        content: 'О компании';
+        display: block;
+        font-size: 35px;
+        color: white;
+        margin-top: -62px;
+    }
+    .about_header_main_text {
+        font-size: 40px;
+        color: #271a42;
+        display: block;
+        width: auto;
+    }
+    .about_main_text_a {
+        margin: 32px 0 0 0;
+    }
+    .about_main_text_a, .about_main_text_b, .about_main_text_c {
+        font-size: 12px;
+        margin-right: 0;
+        padding: 0;
+    }
+    .call_to_ass {
+        font-size: 42px;
+    }
+    .contact_main{
+        width: fit-content;
+        padding: 0;
+    }
+    .info{
+        font-size: 16px;
+    }
+    .work_time{
+        line-height: 28px;
+    }
+    
+ }
